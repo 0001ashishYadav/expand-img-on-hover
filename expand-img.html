@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>expand</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="img1"></div>
+      <div class="img2"></div>
+      <div class="img3"></div>
+      <div class="img4"></div>
+      <div class="img5"></div>
+    </div>
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+      }
+      .main-container {
+        height: 500px;
+        width: 900px;
+        /* border: 2px solid red; */
+        box-shadow: 0px 0px 30px gray inset;
+        background-image: linear-gradient(
+          to top left,
+          rgba(255, 0, 0, 0.322),
+          rgba(0, 0, 0, 0.14),
+          rgba(0, 128, 0, 0.264)
+        );
+        border-radius: 40px;
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        margin-top: 120px;
+        animation: colorMover 20s infinite;
+      }
+
+      @keyframes colorMover {
+        0% {
+          background-image: linear-gradient(
+            to top left,
+            rgba(255, 0, 0, 0.322),
+            rgba(0, 0, 0, 0.14),
+            rgba(0, 128, 0, 0.264)
+          );
+        }
+
+        25% {
+          background-image: linear-gradient(
+            to top right,
+            rgba(255, 0, 0, 0.322),
+            rgba(0, 0, 0, 0.14),
+            rgba(0, 128, 0, 0.264)
+          );
+        }
+
+        50% {
+          background-image: linear-gradient(
+            to bottom right,
+            rgba(255, 0, 0, 0.322),
+            rgba(0, 0, 0, 0.14),
+            rgba(0, 128, 0, 0.264)
+          );
+        }
+        75% {
+          background-image: linear-gradient(
+            to bottom left,
+            rgba(255, 0, 0, 0.322),
+            rgba(0, 0, 0, 0.14),
+            rgba(0, 128, 0, 0.264)
+          );
+        }
+
+        100% {
+          background-image: linear-gradient(
+            to top left,
+            rgba(255, 0, 0, 0.322),
+            rgba(0, 0, 0, 0.14),
+            rgba(0, 128, 0, 0.264)
+          );
+        }
+      }
+
+      .img1 {
+        background-image: url("./assets/img-1.avif");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 350px;
+        width: 150px;
+        border-radius: 100px;
+        margin-left: 30px;
+        transition: all 2s;
+        filter: blur(1px);
+      }
+
+      .img1:hover {
+        width: 400px;
+        border-radius: 0px;
+        border-radius: 20px;
+        background-size: 100% 100%;
+        box-shadow: 0px 0px 20px blue;
+        filter: blur(0px);
+      }
+
+      .img2 {
+        background-image: url("./assets/img-2.avif");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 350px;
+        width: 150px;
+        border-radius: 100px;
+        transition: all 2s;
+        filter: blur(1px);
+      }
+
+      .img2:hover {
+        width: 400px;
+        border-radius: 0px;
+        border-radius: 20px;
+        background-size: 100% 100%;
+        box-shadow: 0px 0px 20px rgb(229, 8, 181);
+        filter: blur(0px);
+      }
+
+      .img3 {
+        background-image: url("./assets/img-3.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 350px;
+        width: 150px;
+        border-radius: 100px;
+        transition: all 2s;
+        filter: blur(1px);
+      }
+
+      .img3:hover {
+        width: 400px;
+        border-radius: 0px;
+        border-radius: 20px;
+        background-size: 100% 100%;
+        box-shadow: 0px 0px 20px rgb(230, 207, 6);
+        filter: blur(0px);
+      }
+
+      .img4 {
+        background-image: url("./assets/img-4.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 350px;
+        width: 150px;
+        border-radius: 100px;
+        transition: all 2s;
+        filter: blur(1px);
+      }
+
+      .img4:hover {
+        width: 400px;
+        border-radius: 0px;
+        border-radius: 20px;
+        background-size: 100% 100%;
+        box-shadow: 0px 0px 20px rgb(3, 240, 3);
+        filter: blur(0px);
+      }
+
+      @media screen and (max-width: 760px) {
+        .main-container {
+          height: 200px;
+          width: 90%;
+        }
+
+        .img1,
+        .img2,
+        .img3,
+        .img4 {
+          height: 140px;
+          width: 16.3%;
+          filter: blur(0.5px);
+        }
+
+        .img1:hover,
+        .img2:hover,
+        .img3:hover,
+        .img4:hover {
+          width: 75%;
+        }
+      }
+    </style>
+  </body>
+</html>
